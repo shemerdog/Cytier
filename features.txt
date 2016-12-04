@@ -1,0 +1,97 @@
+Agent
+	
+	Checks module
+		Update DB
+		Is in domain
+			by WMI
+			by computername
+			by what?
+		Is there AD\DC in network
+			quering DNS
+			scanning for LDAP
+		Is internet connection
+			by ICMP
+			by DNS
+			by HTTP
+			by HTTPS
+			by TCP scanning
+			by UDP scanning
+		Search for devices in subnet
+			computers
+				ping scan
+				SYN scan
+			printers
+				by SMB
+				by port 9100
+			servers
+				by ports
+				by OS fingerprinting
+		Surrounding domains\workgroups
+			using NetBIOS
+			using LDAP server
+		Access neighboring computers
+			by SMB
+			by RPC
+			by RDP
+		Access neighboring servers
+			by HTTP
+			by LDAP
+		Is AV locally active
+			by WMI
+			by Registry entries
+			by running processes
+			by local files system
+		Get NICs details
+			what type
+			is connected
+			ip details
+		Is USB connected
+			identify device type
+		Get sockets Details
+			using netstat
+		Browser Checks
+			query addon details
+			which browser is the default
+		Get local services\processes
+			services
+			services dlls
+			processes
+	
+	Correlation module
+		define risk
+			check results
+			results from different checks
+			compare results by time (today's list compares to yesterday)
+			scoring algorithm
+		query\call checks
+		update risk status\scoring
+	
+	Log\Alert module
+		local alert
+			local log file
+			Windows event viewer
+		remote alert
+			syslog server
+			our own proprietry center and protocol
+			HTTP API
+			mail
+			sms
+			SIEM systems
+	Blocking module
+		Hardening
+			firewall changes
+			registry changes
+			GPO changes
+		Realtime defense
+			reboot system
+			restart application
+			stop\restart process
+			stop\restart service
+			disable NIC
+			disable user privileges
+
+	Update module
+		check for an update
+		run update
+		restart process\service
+		reboot system
